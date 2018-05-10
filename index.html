@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    
+    <title>Mergesort example</title>
+
+    <style>
+    .form-control div {
+    	display: inline;
+    }
+
+    #result{
+    	font-size: 25px;
+    }
+    .screen {
+    	width: 100vw;
+    	height: auto;
+    }
+    .pane {
+    	padding-left: 10%;
+    	padding-right: 10%;
+    }
+    .block {
+    	padding: 15px;
+    	border: 1px solid #ccc;
+    	margin: 15px;
+    }
+    /* unimplemented feature - HIDDEN */
+    #choose-even-odd{
+    	display:none;
+    }
+    </style>
+    <script type="text/javascript" src="https://unpkg.com/rxjs@6.1.0/bundles/rxjs.umd.min.js"></script>
+    <script  src="evaluator-id.js"></script>
+    <script  src="mergesort-sme-api.js"></script>
+    
+
+</head>
+<body>
+	<div class='screen'>
+		<div class='pane'>
+			<div class='block'>
+					<h2>Practise Exercise on Split</h2>
+					<button> Generate array </button>
+					 <select id='choose-even-odd'>
+					  <option value="even">Even</option>
+					  <option value="odd">ODD</option>
+					</select> 
+					<h3>Puzzle</h3>
+					<h4 id='step4'></h4> 
+			</div>
+			<div class='block'>
+				<h3> Test your understanding of split </h3>
+				<p id="split-test-instruction">
+					Split the list and enter the values in the below input boxes.
+					<h4>Enter values seperated by space</h4>
+				</p>
+				<div class="form-control">
+					<div>
+						<label for="left">Left:</label>
+						<!-- Max length depends on length of input array -->
+						<input type="text"  id="left-input" name="left" MAXLENGTH="7"/>
+					</div>
+					<div>
+						<label for="right">Right:</label>
+						<input type="text" id="right-input" name="right" MAXLENGTH="7"/>
+					</div>
+					<button id="submit-result-btn">Submit</button>
+				</div>
+				<div class="result-container">
+					<h3> Result </h3>
+					<div id="result">
+					</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<script  src="split-exercise-ux.js"></script>
+<script type="text/javascript">
+window.onload = A3scene.init();
+</script>
+</body>
+</html>
